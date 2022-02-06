@@ -1,4 +1,9 @@
 
+Non-platform environment:
+```
+NITTER_DOMAIN
+```
+
 ## Getting Twitter creds
 1. Make an account https://developer.twitter.com/en/portal/
 1. Click `View products`, get `Elevated` access.
@@ -20,7 +25,7 @@ ACCESS_SECRET
 
 ## Getting Telegram creds
 1. You can get a Telegram bot API key from [@botfather](https://t.me/botfather) (env: `TELEGRAM_KEY`)
-1. get chan id #TODO:
+1. Get channel ID by running the bot without `TELEGRAM_ID`
 
 Environment needed:
 ```
