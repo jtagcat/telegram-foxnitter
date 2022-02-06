@@ -54,11 +54,11 @@ func main() {
 		if u.ChannelPost != nil { // message on channel
 			u.Message = u.ChannelPost
 		}
-		if u.Message != nil { // update iz message
+		if u.Message != nil { // update iz message with text
 			if tgIDStr == "" {
 				log.Info().Int64("id", u.Message.Chat.ID).Str("name", u.Message.Chat.Title).Msg("No ID set, relaying ID of incoming message")
 			}
-			if u.Message.Chat.ID == tgID {
+			if u.Message.Chat.ID == tgID && u.Message.Entities != nil {
 				for _, e := range *u.Message.Entities {
 					if e.Type == "url" {
 						url, err := url.Parse(u.Message.Text[e.Offset : e.Offset+e.Length])
