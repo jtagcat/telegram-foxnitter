@@ -1,10 +1,12 @@
+This is slapped and bodged together, don't expect anything.
 
+## Configuration
 Non-platform environment:
 ```
 NITTER_DOMAIN
 ```
 
-## Getting Twitter creds
+### Getting Twitter creds
 1. Make an account https://developer.twitter.com/en/portal/
 1. Click `View products`, get `Elevated` access.
 1. `Projects & Apps` → `Project 1` → `FoxNitter`
@@ -23,7 +25,7 @@ ACCESS_TOKEN
 ACCESS_SECRET
 ```
 
-## Getting Telegram creds
+### Getting Telegram creds
 1. You can get a Telegram bot API key from [@botfather](https://t.me/botfather) (env: `TELEGRAM_KEY`)
 1. Get channel ID by running the bot without `TELEGRAM_ID`
 
