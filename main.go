@@ -7,7 +7,9 @@ import (
 	"strings"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
+	simpleretry "github.com/jtagcat/simpleretry/pkg"
 	"github.com/rs/zerolog/log"
+	"k8s.io/apimachinery/pkg/util/wait"
 
 	"github.com/dghubble/go-twitter/twitter"
 	"github.com/dghubble/oauth1"
@@ -74,7 +76,15 @@ func main() {
 								log.Error().Err(err).Msg("Failed parsing tweet ID")
 								break
 							}
-							_, _, err = tw.Statuses.Retweet(twid, &twitter.StatusRetweetParams{})
+
+							err = simpleretry.OnError(wait.Backoff{
+								Duration: 2,
+								Factor:   2,
+								Steps:    4,
+							}, func() (bool, error) {
+								_, _, err := tw.Statuses.Retweet(twid, &twitter.StatusRetweetParams{})
+								return true, err
+							})
 							if err != nil {
 								log.Error().Err(err).Msg("error retweeting")
 								break
