@@ -1,11 +1,7 @@
 
-# stuck on https://github.com/moby/moby/issues/29110
-#FROM alpine
-#COPY getGoModVersion.sh .
-#COPY go.mod .
-#ENVCMD gover ./getGoModversion.sh
+# 1.17 hardcoded; stuck on https://github.com/moby/moby/issues/29110
+# moved to https://gist.github.com/jtagcat/189b2fd239687ab700f54faa46907df4
 
-#FROM golang:$ver
 FROM golang:1.17 AS builder
 WORKDIR /wd
 
