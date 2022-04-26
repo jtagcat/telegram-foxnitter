@@ -1,11 +1,11 @@
 module github.com/jtagcat/telegram-foxnitter
 
-go 1.17
+go 1.18
 
-require github.com/dghubble/go-twitter v0.0.0-20211115160449-93a8679adecb
+require github.com/dghubble/go-twitter v0.0.0-20220413154426-14d8abde2e80
 
 require (
-	github.com/go-logr/logr v1.2.2 // indirect
+	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/google/go-cmp v0.5.7 // indirect
 	github.com/google/gofuzz v1.2.0 // indirect
@@ -13,24 +13,24 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/technoweenie/multipartstreamer v1.0.1 // indirect
-	golang.org/x/net v0.0.0-20220225172249-27dd8689420f // indirect
+	golang.org/x/net v0.0.0-20220425223048-2871e0cb64e4 // indirect
 	golang.org/x/text v0.3.7 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	k8s.io/client-go v0.23.4 // indirect
-	k8s.io/klog/v2 v2.40.1 // indirect
+	k8s.io/client-go v0.23.6 // indirect
+	k8s.io/klog/v2 v2.60.1 // indirect
 	k8s.io/utils v0.0.0-20220210201930-3a6ce19ff2f9 // indirect
 	sigs.k8s.io/json v0.0.0-20211208200746-9f7c6b3444d2 // indirect
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.1 // indirect
 )
 
 require (
-	github.com/cenkalti/backoff/v4 v4.1.2 // indirect
+	github.com/cenkalti/backoff/v4 v4.1.3 // indirect
 	github.com/dghubble/oauth1 v0.7.1
 	github.com/dghubble/sling v1.4.0 // indirect
 	github.com/go-telegram-bot-api/telegram-bot-api v4.6.4+incompatible
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/jtagcat/simpleretry v1.1.2
 	github.com/rs/zerolog v1.26.1
-	k8s.io/apimachinery v0.23.4
+	k8s.io/apimachinery v0.23.6
 )
