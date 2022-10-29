@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
-	simpleretry "github.com/jtagcat/simpleretry/pkg"
+	"github.com/jtagcat/simple"
 	"github.com/rs/zerolog/log"
 	"k8s.io/apimachinery/pkg/util/wait"
 
@@ -77,7 +77,7 @@ func main() {
 								break
 							}
 
-							err = simpleretry.OnError(wait.Backoff{
+							err = simple.RetryOnError(wait.Backoff{
 								Duration: 2,
 								Factor:   2,
 								Steps:    4,
